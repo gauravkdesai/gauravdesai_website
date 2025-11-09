@@ -1,0 +1,197 @@
+.about {
+  background-color: var(--white);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-blue);
+  border-radius: 2px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-bio {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-bio p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  white-space: pre-line;
+}
+
+.subsection-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-skills {
+  width: 100%;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--gray-lighter);
+  color: var(--text-primary);
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.skill-tag:hover {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.skill-tag[data-category="language"] {
+  border-color: #3b82f6;
+}
+
+.skill-tag[data-category="framework"] {
+  border-color: #10b981;
+}
+
+.skill-tag[data-category="database"] {
+  border-color: #f59e0b;
+}
+
+.skill-tag[data-category="cloud"] {
+  border-color: #8b5cf6;
+}
+
+.skill-tag[data-category="devops"] {
+  border-color: #ef4444;
+}
+
+.skill-tag[data-category="tool"] {
+  border-color: #6b7280;
+}
+
+.skill-tag[data-category="methodology"] {
+  border-color: #ec4899;
+}
+
+.about-certifications {
+  width: 100%;
+}
+
+.certifications-list {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.certification-item {
+  background-color: var(--gray-lighter);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.certification-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certification-item strong {
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.certification-item a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+.certification-item a:hover {
+  text-decoration: underline;
+}
+
+.cert-issuer {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.cert-date {
+  color: var(--gray-medium);
+  font-size: 0.875rem;
+}
+
+.no-certifications {
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+  }
+
+  .about-bio p {
+    font-size: 1rem;
+  }
+
+  .skill-tag {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+

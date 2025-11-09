@@ -1,0 +1,111 @@
+.contact {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--white);
+}
+
+.contact .section-title {
+  color: var(--white);
+}
+
+.contact .section-title::after {
+  background-color: var(--white);
+}
+
+.contact .section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-content {
+  margin-top: 3rem;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-card.location {
+  cursor: default;
+}
+
+.contact-card:not(.location):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.contact-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--white);
+}
+
+.contact-card-value {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+

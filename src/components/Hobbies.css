@@ -1,0 +1,118 @@
+.hobbies {
+  background-color: var(--white);
+}
+
+.hobbies-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hobbies-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hobbies-description {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  white-space: pre-line;
+}
+
+.hobby-projects {
+  width: 100%;
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.hobby-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  color: var(--white);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hobby-card:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.hobby-card:nth-child(3) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.hobby-description {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  opacity: 0.95;
+}
+
+.hobby-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--white);
+  font-weight: 500;
+  margin-top: auto;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.hobby-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(5px);
+}
+
+.hobby-link svg {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hobbies-description {
+    font-size: 1rem;
+  }
+
+  .hobby-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hobby-card {
+    padding: 1.5rem;
+  }
+
+  .hobby-title {
+    font-size: 1.25rem;
+  }
+}
+
