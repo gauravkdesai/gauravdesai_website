@@ -1,20 +1,54 @@
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
+import { useState } from 'react'
+import { FaLinkedin, FaGithub, FaEnvelope, FaCopy, FaCheck } from 'react-icons/fa'
 import './Hero.css'
 
 function Hero() {
+  const [copied, setCopied] = useState(false)
+  
   // TODO: Update with your actual social media links
   const socialLinks = {
     linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
     github: 'https://github.com/gauravkdesai',
-    email: 'mailto:your.email@example.com' // TODO: Update with your email
+    email: 'mailto:gauravdesai111+frompersonalwebsite@gmail.com' // TODO: Update with your email
+  }
+
+  // Extract email address from mailto link
+  const emailAddress = socialLinks.email.replace('mailto:', '')
+
+  const handleCopyEmail = async (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    
+    try {
+      await navigator.clipboard.writeText(emailAddress)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy email:', err)
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea')
+      textArea.value = emailAddress
+      textArea.style.position = 'fixed'
+      textArea.style.opacity = '0'
+      document.body.appendChild(textArea)
+      textArea.select()
+      try {
+        document.execCommand('copy')
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      } catch (fallbackErr) {
+        console.error('Fallback copy failed:', fallbackErr)
+      }
+      document.body.removeChild(textArea)
+    }
   }
 
   // TODO: Update with your short bio
-  const shortBio = "Passionate software engineer with expertise in building scalable applications and solving complex problems. Always learning, always building."
+  const shortBio = "Zurich-based Techno Risk Manager. Model Risk Management & AI Risk Specialist @ UBS. Always learning. Coder at heart."
 
   // TODO: Replace with path to your profile photo
   // Place your profile photo in public/assets/profile-photo.jpg
-  const profilePhoto = '/assets/profile-photo.jpg'
+  const profilePhoto = '/assets/profile-photo.png'
 
   return (
     <section id="home" className="hero">
@@ -50,9 +84,21 @@ function Hero() {
                 href={socialLinks.email}
                 className="social-link email"
                 aria-label="Email"
+                onContextMenu={(e) => {
+                  // Right-click still opens mailto
+                  return true
+                }}
               >
                 <FaEnvelope />
                 <span>Email</span>
+                <button
+                  className="email-copy-icon"
+                  onClick={handleCopyEmail}
+                  aria-label="Copy email address"
+                  title={copied ? 'Copied!' : 'Click to copy email'}
+                >
+                  {copied ? <FaCheck /> : <FaCopy />}
+                </button>
               </a>
             </div>
           </div>

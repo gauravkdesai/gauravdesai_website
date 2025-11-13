@@ -2,45 +2,58 @@ import './About.css'
 
 function About() {
   // TODO: Update with your expanded bio
-  const expandedBio = `I'm a passionate software engineer with a strong foundation in computer science and a love for building innovative solutions. 
-  With experience in full-stack development, I enjoy working on challenging problems and creating applications that make a difference.
-  
-  My journey in technology has been driven by curiosity and a commitment to continuous learning. I'm always exploring new technologies 
-  and methodologies to stay at the forefront of software development.`
+  const expandedBio = `Hi, I’m Gaurav. I work in tech and risk management at UBS in Zurich. I started my career in software development, Java, Python, all kinds of coding. 
+  These days I’m into data ethics and AI risk.
+
+Travel’s a big part of my life, whether it’s family trips, quick escapes, or just poking around new places. I’m also a Formula 1 fan. Following the races has become a bit of a ritual, and I love the drama and strategy behind it. And while I appreciate living surrounded by Swiss mountains, you’ll more likely find me exploring a city or catching an event than hiking a summit.
+
+On the professional side, I focus a lot on practical problem-solving, making sure we balance innovation with real-world responsibility. My work keeps evolving—these days it’s as much about sorting out risks as it is about code.
+
+This space is just about sharing what I’m up to, what I care about, and occasionally what I’m learning along the way. If something here sparks a conversation, even better.`
 
   // TODO: Update with your actual skills
   const skills = [
-    { name: 'JavaScript', category: 'language' },
-    { name: 'TypeScript', category: 'language' },
-    { name: 'React', category: 'framework' },
-    { name: 'Node.js', category: 'framework' },
     { name: 'Python', category: 'language' },
     { name: 'Java', category: 'language' },
     { name: 'SQL', category: 'database' },
-    { name: 'MongoDB', category: 'database' },
-    { name: 'AWS', category: 'cloud' },
-    { name: 'Docker', category: 'devops' },
-    { name: 'Git', category: 'tool' },
-    { name: 'Agile', category: 'methodology' }
+    { name: 'QlikView', category: 'BI/dashboard' },
+    { name: 'Scikit-learn', category: 'ML framework' },
+    { name: 'Pandas', category: 'data analysis' },
+    { name: 'NumPy', category: 'data analysis' },
+    { name: 'R', category: 'language' },
+    { name: 'Latex', category: 'documentation' },
+    { name: 'Agile', category: 'methodology' },
+    { name: 'Leadership', category: 'management' },
+    { name: 'Model Risk Management', category: 'risk management' },
+    { name: 'AML Financial Risk', category: 'risk management' },
+    { name: 'Data Science', category: 'domain' },
+    { name: 'Cloud (AWS/GCP)', category: 'cloud' },
+    { name: 'Git', category: 'tool' }
   ]
-
+  
   // TODO: Update with your actual certifications
   const certifications = [
     {
-      name: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2023',
-      // TODO: Add link if available
+      name: 'Certificate in Quantitative Finance',
+      issuer: 'CQF Institute',
+      date: '2022',
       link: null
     },
     {
-      name: 'Certified Kubernetes Administrator',
-      issuer: 'Cloud Native Computing Foundation',
-      date: '2022',
+      name: 'Oxford Data Ethics Certification',
+      issuer: 'University of Oxford',
+      date: '2025',
+      link: null
+    },
+    {
+      name: 'Master of Information and Data Science',
+      issuer: 'University of California, Berkeley',
+      date: '2020',
       link: null
     }
-    // TODO: Add more certifications as needed
+    // Add more if the LinkedIn profile lists other recent certifications
   ]
+  
 
   return (
     <section id="about" className="about">

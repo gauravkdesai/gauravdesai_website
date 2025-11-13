@@ -1,12 +1,43 @@
-import { FaEnvelope, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa'
+import { useState } from 'react'
+import { FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaCopy, FaCheck } from 'react-icons/fa'
 import './Contact.css'
 
 function Contact() {
+  const [copied, setCopied] = useState(false)
+  
   // TODO: Update with your actual contact information
   const contactInfo = {
     email: 'gauravdesai111+frompersonalwebsite@gmail.com', 
     linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
     location: 'Zurich, Switzerland'
+  }
+
+  const handleCopyEmail = async (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    
+    try {
+      await navigator.clipboard.writeText(contactInfo.email)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy email:', err)
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea')
+      textArea.value = contactInfo.email
+      textArea.style.position = 'fixed'
+      textArea.style.opacity = '0'
+      document.body.appendChild(textArea)
+      textArea.select()
+      try {
+        document.execCommand('copy')
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+      } catch (fallbackErr) {
+        console.error('Fallback copy failed:', fallbackErr)
+      }
+      document.body.removeChild(textArea)
+    }
   }
 
   return (
@@ -28,7 +59,17 @@ function Contact() {
                 <FaEnvelope />
               </div>
               <h3 className="contact-card-title">Email</h3>
-              <p className="contact-card-value">{contactInfo.email}</p>
+              <div className="contact-card-value-wrapper">
+                <p className="contact-card-value">{contactInfo.email}</p>
+                <button
+                  className="copy-email-btn"
+                  onClick={handleCopyEmail}
+                  aria-label="Copy email address"
+                  title={copied ? 'Copied!' : 'Copy email'}
+                >
+                  {copied ? <FaCheck /> : <FaCopy />}
+                </button>
+              </div>
             </a>
 
             <a 

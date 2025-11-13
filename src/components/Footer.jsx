@@ -6,16 +6,15 @@ function Footer() {
 
   // TODO: Update with your actual domain names
   const domainNames = [
-    'gauravdesai.com',
-    'gauravkdesai.dev'
-    // TODO: Add your domain names here
+    'gaurav-desai.com',
+    //'gauravkdesai.dev'
   ]
 
   // TODO: Update with your actual social links
   const socialLinks = {
     linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
     github: 'https://github.com/gauravkdesai',
-    email: 'mailto:your.email@example.com' // TODO: Update with your email
+    email: 'mailto:gauravdesai111-frompersonalwebsite@gmail.com' 
   }
 
   const handleNavClick = (e, sectionId) => {
