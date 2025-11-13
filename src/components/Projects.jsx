@@ -5,7 +5,7 @@ function Projects() {
   // TODO: Update with your actual projects
   // Structure: title, description, tech (array), github (url), demo (url, optional)
   const projects = [
-    {
+    /* {
       title: 'E-Commerce Platform',
       description: 'A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration. Built with modern web technologies for scalability and performance.',
       tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
@@ -32,7 +32,7 @@ function Projects() {
       tech: ['Python', 'Flask', 'TensorFlow', 'Docker', 'AWS'],
       github: 'https://github.com/gauravkdesai/ml-api',
       demo: null
-    }
+    } */
     // TODO: Add more projects as needed
   ]
 

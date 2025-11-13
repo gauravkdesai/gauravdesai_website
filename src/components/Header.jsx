@@ -6,11 +6,11 @@ function Header() {
   const [activeSection, setActiveSection] = useState('home')
 
   // TODO: Update tagline with your personal tagline
-  const tagline = "Software Engineer & Developer"
+  const tagline = "Software Developer Turned Risk Manager"
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'hobbies', 'contact']
+      const sections = ['home', 'about', 'projects', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -76,13 +76,13 @@ function Header() {
           >
             Projects
           </a>
-          <a 
+{/*           <a 
             href="#hobbies" 
             className={activeSection === 'hobbies' ? 'active' : ''}
             onClick={(e) => handleNavClick(e, 'hobbies')}
           >
             Hobbies
-          </a>
+          </a> */}
           <a 
             href="#contact" 
             className={activeSection === 'contact' ? 'active' : ''}
