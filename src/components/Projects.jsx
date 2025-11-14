@@ -2,7 +2,6 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import './Projects.css'
 
 function Projects() {
-  // TODO: Update with your actual projects
   // Structure: title, description, tech (array), github (url), demo (url, optional), wip (boolean, optional)
   const projects = [
     {
@@ -85,7 +84,7 @@ function Projects() {
       <div className="projects-container">
         <h2 className="section-title">Projects</h2>
         <p className="section-subtitle">
-          A selection of my work and hobby projects. {/* TODO: Customize this subtitle */}
+        Portfolio of Personal Projects 
         </p>
         
         <div className="projects-grid">

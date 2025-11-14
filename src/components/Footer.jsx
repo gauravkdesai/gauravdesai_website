@@ -4,13 +4,11 @@ import './Footer.css'
 function Footer() {
   const currentYear = new Date().getFullYear()
 
-  // TODO: Update with your actual domain names
   const domainNames = [
     'gaurav-desai.com',
     //'gauravkdesai.dev'
   ]
 
-  // TODO: Update with your actual social links
   const socialLinks = {
     linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
     github: 'https://github.com/gauravkdesai',

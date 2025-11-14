@@ -5,7 +5,6 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
-  // TODO: Update tagline with your personal tagline
   const tagline = "Software Developer Turned Risk Manager"
 
   useEffect(() => {

@@ -5,11 +5,10 @@ import './Hero.css'
 function Hero() {
   const [copied, setCopied] = useState(false)
   
-  // TODO: Update with your actual social media links
   const socialLinks = {
     linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
     github: 'https://github.com/gauravkdesai',
-    email: 'mailto:contact@gaurav-desai.com' // TODO: Update with your email
+    email: 'mailto:contact@gaurav-desai.com' 
   }
 
   // Extract email address from mailto link
@@ -43,10 +42,8 @@ function Hero() {
     }
   }
 
-  // TODO: Update with your short bio
-  const shortBio = "Zurich-based Techno Risk Manager. Model Risk Management & AI Risk Specialist @ UBS. Always learning. Coder at heart."
+  const shortBio = "Model Risk Management & AI Risk Specialist at UBS in Zurich, with a passion for code and continuous learning."
 
-  // TODO: Replace with path to your profile photo
   // Place your profile photo in public/assets/profile-photo.jpg
   const profilePhoto = '/assets/profile-photo.png'
 

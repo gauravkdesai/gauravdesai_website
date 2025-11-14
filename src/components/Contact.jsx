@@ -5,7 +5,6 @@ import './Contact.css'
 function Contact() {
   const [copied, setCopied] = useState(false)
   
-  // TODO: Update with your actual contact information
   const contactInfo = {
     email: 'contact@gaurav-desai.com', 
     linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
