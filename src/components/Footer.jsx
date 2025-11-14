@@ -14,7 +14,7 @@ function Footer() {
   const socialLinks = {
     linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
     github: 'https://github.com/gauravkdesai',
-    email: 'mailto:gauravdesai111-frompersonalwebsite@gmail.com' 
+    email: 'mailto:contact@gaurav-desai.com' 
   }
 
   const handleNavClick = (e, sectionId) => {

@@ -9,7 +9,7 @@ function Hero() {
   const socialLinks = {
     linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
     github: 'https://github.com/gauravkdesai',
-    email: 'mailto:gauravdesai111+frompersonalwebsite@gmail.com' // TODO: Update with your email
+    email: 'mailto:contact@gaurav-desai.com' // TODO: Update with your email
   }
 
   // Extract email address from mailto link

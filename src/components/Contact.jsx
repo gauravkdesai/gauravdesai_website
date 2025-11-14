@@ -7,7 +7,7 @@ function Contact() {
   
   // TODO: Update with your actual contact information
   const contactInfo = {
-    email: 'gauravdesai111+frompersonalwebsite@gmail.com', 
+    email: 'contact@gaurav-desai.com', 
     linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
     location: 'Zurich, Switzerland'
   }
