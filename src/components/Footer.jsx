@@ -35,7 +35,7 @@ function Footer() {
               <a href="#home" onClick={(e) => handleNavClick(e, 'home')}>Home</a>
               <a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a>
               <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}>Projects</a>
-              <a href="#hobbies" onClick={(e) => handleNavClick(e, 'hobbies')}>Hobbies</a>
+              {/* <a href="#hobbies" onClick={(e) => handleNavClick(e, 'hobbies')}>Hobbies</a> */}
               <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Contact</a>
             </nav>
           </div>
@@ -61,6 +61,8 @@ function Footer() {
               </a>
               <a 
                 href={socialLinks.email}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Email"
               >
                 <FaEnvelope />

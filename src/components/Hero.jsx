@@ -82,6 +82,8 @@ function Hero() {
               </a>
               <a 
                 href={socialLinks.email}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="social-link email"
                 aria-label="Email"
                 onContextMenu={(e) => {

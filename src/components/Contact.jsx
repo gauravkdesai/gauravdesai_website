@@ -52,6 +52,8 @@ function Contact() {
           <div className="contact-cards">
             <a 
               href={`mailto:${contactInfo.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="contact-card"
               aria-label="Send email"
             >

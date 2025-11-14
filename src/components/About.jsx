@@ -2,14 +2,13 @@ import './About.css'
 
 function About() {
   // TODO: Update with your expanded bio
-  const expandedBio = `Hi, I’m Gaurav. I work in tech and risk management at UBS in Zurich. I started my career in software development, Java, Python, all kinds of coding. 
-  These days I’m into data ethics and AI risk.
+  const expandedBio = `Hi, I’m Gaurav. I work in tech and risk management at UBS in Zurich. I started my career in software development, Java, Python, all kinds of coding. These days I’m into data ethics and AI risk.
 
-Travel’s a big part of my life, whether it’s family trips, quick escapes, or just poking around new places. I’m also a Formula 1 fan. Following the races has become a bit of a ritual, and I love the drama and strategy behind it. And while I appreciate living surrounded by Swiss mountains, you’ll more likely find me exploring a city or catching an event than hiking a summit.
+Travel is a big part of my life, whether it is family trips, quick escapes, or just poking around new places. I am also a Formula 1 fan. Following the races has become a bit of a ritual, and I love the drama and strategy behind it. And while I appreciate living surrounded by Swiss mountains, you’ll more likely find me exploring a city or catching an event than hiking a summit.
 
-On the professional side, I focus a lot on practical problem-solving, making sure we balance innovation with real-world responsibility. My work keeps evolving—these days it’s as much about sorting out risks as it is about code.
+On the professional side, I focus a lot on practical problem-solving, making sure we balance innovation with real-world responsibility. My work keeps evolving—these days. It is as much about sorting out risks as it is about code.
 
-This space is just about sharing what I’m up to, what I care about, and occasionally what I’m learning along the way. If something here sparks a conversation, even better.`
+This space is just about sharing what I am up to, what I care about, and occasionally what I am learning along the way. If something here sparks a conversation, even better.`
 
   // TODO: Update with your actual skills
   const skills = [

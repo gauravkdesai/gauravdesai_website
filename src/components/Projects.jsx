@@ -3,38 +3,82 @@ import './Projects.css'
 
 function Projects() {
   // TODO: Update with your actual projects
-  // Structure: title, description, tech (array), github (url), demo (url, optional)
+  // Structure: title, description, tech (array), github (url), demo (url, optional), wip (boolean, optional)
   const projects = [
-    /* {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce application with user authentication, product management, shopping cart, and payment integration. Built with modern web technologies for scalability and performance.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-      github: 'https://github.com/gauravkdesai/ecommerce-platform',
-      demo: 'https://demo.example.com'
+    {
+      title: 'AgenticTravelPlanner',
+      description: 'A complete agentic travel planner that uses multiple AI agents to create personalized itineraries with natural language input. Features interactive question flow, multi-agent system for flights/hotels/transport/events, day-by-day itinerary generation, and iterative refinement capabilities.',
+      tech: ['Java', 'JavaScript', 'HTML5', 'CSS3', 'AI Agents', 'LLMs'],
+      github: 'https://github.com/gauravkdesai/AgenticTravelPlanner',
+      demo: null,
+      wip: true
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features. Designed for productivity and seamless user experience.',
-      tech: ['React', 'TypeScript', 'Firebase', 'Material-UI'],
-      github: 'https://github.com/gauravkdesai/task-manager',
-      demo: null
+      title: 'Kid-Friendly Memory Game',
+      description: 'A colorful, engaging memory card matching game specifically designed for young children. Features 20 kid-friendly themed sets (vehicles, animals, dinosaurs, space, sports, superheroes), theme rotation system, bright animations, and adjustable difficulty levels.',
+      tech: ['HTML5', 'CSS3', 'JavaScript'],
+      github: 'https://github.com/gauravkdesai/memory_game_for_kids',
+      demo: 'https://gauravkdesai.github.io/memory_game_for_kids/',
+      wip: false
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard that displays current conditions and forecasts. Features interactive maps, location-based search, and beautiful data visualizations.',
-      tech: ['JavaScript', 'HTML5', 'CSS3', 'OpenWeather API'],
-      github: 'https://github.com/gauravkdesai/weather-dashboard',
-      demo: 'https://weather-demo.example.com'
+      title: 'Medical Insurance Payment Assistant',
+      description: 'An intelligent assistant that helps users navigate medical insurance payment processes. Built as part of MIDS W210 coursework, featuring natural language processing and automated decision-making capabilities.',
+      tech: ['Python', 'Jupyter Notebook', 'Machine Learning', 'NLP'],
+      github: 'https://github.com/gauravkdesai/MIDS-W210-Medical_Insurance_Payment_Assistant',
+      demo: null,
+      wip: false
     },
     {
-      title: 'Machine Learning Model API',
-      description: 'RESTful API for serving machine learning models with automatic scaling, request queuing, and comprehensive logging. Optimized for production deployment.',
-      tech: ['Python', 'Flask', 'TensorFlow', 'Docker', 'AWS'],
-      github: 'https://github.com/gauravkdesai/ml-api',
-      demo: null
-    } */
-    // TODO: Add more projects as needed
+      title: 'Fake News & Bias Detection with OOV',
+      description: 'MIDS w266 final project to detect Out of Vocabulary words in fake news and bias detection. Implements advanced NLP techniques to identify misinformation and media bias using novel approaches for handling unknown vocabulary.',
+      tech: ['Python', 'Jupyter Notebook', 'NLP', 'Deep Learning', 'Mimick Embeddings'],
+      github: 'https://github.com/gauravkdesai/w266-final-project-OOV-fake-bias-detection',
+      demo: null,
+      wip: false
+    },
+    {
+      title: 'COWIN API Wrapper',
+      description: 'Python wrapper for India\'s COVID-19 vaccination appointment API. Includes real-time monitoring for available vaccine slots, district-wise search functionality, and automated notification system to help citizens find vaccination appointments.',
+      tech: ['Python', 'REST API', 'Automation'],
+      github: 'https://github.com/gauravkdesai/COWIN-API-WRAPPER',
+      demo: null,
+      wip: false
+    },
+    {
+      title: 'TicTacToe with Machine Learning',
+      description: 'Traditional TicTacToe game enhanced with machine learning capabilities. The AI learns to play the game using decision tree algorithms, improving its strategy through gameplay experience.',
+      tech: ['Python', 'Machine Learning', 'Decision Trees', 'Game AI'],
+      github: 'https://github.com/gauravkdesai/TicTacToeWithML',
+      demo: null,
+      wip: true
+    },
+    {
+      title: 'SimpleJsonStore',
+      description: 'Asynchronous servlet application to store and retrieve JSON messages from MongoDB. Demonstrates asynchronous request/response pipeline using blocking queue executors, async context handling, and MongoDB async drivers. Can be deployed on Jetty server.',
+      tech: ['Java', 'MongoDB', 'Jetty', 'Async Servlets', 'REST API'],
+      github: 'https://github.com/gauravkdesai/SimpleJsonStore',
+      demo: null,
+      wip: false
+    },
+    {
+      title: 'Home Credit Default Risk Prediction',
+      description: 'w207 Applied Machine Learning final group project analyzing home credit default risk. Implements various ML algorithms to predict loan default probability, helping financial institutions make better lending decisions.',
+      tech: ['Python', 'Jupyter Notebook', 'Machine Learning', 'Data Analysis', 'scikit-learn'],
+      github: 'https://github.com/gauravkdesai/w207-FinalProject-HomeCreditDefaultRisk',
+      demo: null,
+      wip: false
+    },  
+    {
+      title: 'Olympic Gold Medal Analysis',
+      description: 'Data visualization project analyzing Olympic Gold Medal patterns for w209 final project. Interactive visualizations explore historical trends, country performances, and athletic achievements across different Olympic games.',
+      tech: ['HTML5', 'CSS3', 'JavaScript', 'D3.js', 'Data Visualization'],
+      github: 'https://github.com/gauravkdesai/MIDS-w209-OlympicGoldMedalAnalysis',
+      demo: null,
+      wip: false
+    }
   ]
+  
 
   return (
     <section id="projects" className="projects">
@@ -46,8 +90,13 @@ function Projects() {
         
         <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="project-card">
-              <h3 className="project-title">{project.title}</h3>
+            <div key={index} className={`project-card ${project.wip ? 'project-card-wip' : ''}`}>
+              <div className="project-title-container">
+                <h3 className="project-title">{project.title}</h3>
+                {project.wip && (
+                  <span className="wip-badge" title="Work in Progress">WIP</span>
+                )}
+              </div>
               <p className="project-description">{project.description}</p>
               
               <div className="project-tech">
