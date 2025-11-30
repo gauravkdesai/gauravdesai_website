@@ -1,6 +1,5 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import './Projects.css'
-import { FaGalacticSenate } from 'react-icons/fa6'
 
 function Projects() {
   // Structure: title, description, tech (array), github (url), demo (url, optional), wip (boolean, optional)

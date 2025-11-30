@@ -106,6 +106,7 @@ function Hero() {
             <img 
               src={profilePhoto} 
               alt="Gaurav Desai" 
+              loading="lazy"
               onError={(e) => {
                 // Fallback to placeholder if image not found
                 e.target.src = 'https://via.placeholder.com/400x400?text=Profile+Photo'
