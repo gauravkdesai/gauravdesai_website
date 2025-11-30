@@ -1,9 +1,18 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import './Projects.css'
+import { FaGalacticSenate } from 'react-icons/fa6'
 
 function Projects() {
   // Structure: title, description, tech (array), github (url), demo (url, optional), wip (boolean, optional)
   const projects = [
+      {
+      title: 'Weather Appropriate Clothing Recommender',
+      description: 'A tool that recommends clothing based on current weather conditions to help users dress appropriately. Utilizes weather APIs to fetch real-time data and provides suggestions tailored to temperature, precipitation, and wind conditions. Also has ability to take into account personal constraints, travel plans etc. during clothing suggestions.',
+      tech: ['JavaScript', 'HTML5', 'CSS3', 'AI Agents', 'LLMs'],
+      github: 'https://github.com/gauravkdesai/Family-Weather-Wardrobe',
+      demo: 'https://weather-appropriate-wardrobe.gaurav-desai.com/',
+      wip: false
+    },
     {
       title: 'AgenticTravelPlanner',
       description: 'A complete agentic travel planner that uses multiple AI agents to create personalized itineraries with natural language input. Features interactive question flow, multi-agent system for flights/hotels/transport/events, day-by-day itinerary generation, and iterative refinement capabilities.',
