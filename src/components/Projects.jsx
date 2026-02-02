@@ -48,14 +48,14 @@ function Projects() {
           className="projects-grid"
         >
           <AnimatePresence>
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project) => (
               <motion.div 
                 layout
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                key={`${project.title}-${index}`} // Use title to maintain identity for animation
+                key={project.title}
                 className={`project-card ${project.wip ? 'project-card-wip' : ''}`}
               >
                 <div className="project-title-container">
