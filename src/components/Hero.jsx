@@ -64,7 +64,7 @@ function Hero() {
             
             <div className="hero-actions">
               <a 
-                href="/gauravdesai_website/resume.pdf" 
+                href="/resume.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="resume-btn"
