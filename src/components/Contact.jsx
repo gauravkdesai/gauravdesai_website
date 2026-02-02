@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaCopy, FaCheck } from 'react-icons/fa'
 import { contactInfo } from '../data/contact'
 import SafeLink from './common/SafeLink'
@@ -37,7 +38,13 @@ function Contact() {
 
   return (
     <section id="contact" className="contact">
-      <div className="contact-container">
+      <motion.div 
+        className="contact-container"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className="section-title">Get In Touch</h2>
         <p className="section-subtitle">
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
@@ -45,7 +52,11 @@ function Contact() {
         
         <div className="contact-content">
           <div className="contact-cards">
-            <div className="contact-card email-card">
+            <motion.div 
+              className="contact-card email-card"
+              whileHover={{ y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <SafeLink 
                 href={`mailto:${contactInfo.email}`}
                 className="contact-card-link"
@@ -67,7 +78,7 @@ function Contact() {
                   {copied ? <FaCheck /> : <FaCopy />}
                 </button>
               </div>
-            </div>
+            </motion.div>
 
             <SafeLink 
               href={contactInfo.linkedin}
@@ -90,7 +101,7 @@ function Contact() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

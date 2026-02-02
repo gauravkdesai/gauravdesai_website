@@ -21,7 +21,7 @@
 }
 
 .hero-text {
-  animation: fadeInUp 0.8s ease;
+  /* Animation handled by Framer Motion */
 }
 
 .hero-greeting {
@@ -47,6 +47,31 @@
   max-width: 600px;
 }
 
+.hero-actions {
+  margin-bottom: 2rem;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1.75rem;
+  background-color: var(--primary-blue);
+  color: #ffffff; /* Always white for contrast on blue */
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.25);
+  border: 2px solid transparent;
+}
+
+.resume-btn:hover {
+  background-color: var(--primary-blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.35);
+}
+
 .hero-social {
   display: flex;
   gap: 1.5rem;
@@ -57,29 +82,33 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
   background-color: var(--white);
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
   transition: all 0.3s ease;
   color: var(--text-primary);
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  border: 1px solid var(--gray-lighter); /* Added border for definition */
 }
 
 .social-link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: var(--gray-light);
 }
 
 .social-link.linkedin:hover {
   background-color: #0077b5;
-  color: var(--white);
+  color: #ffffff;
+  border-color: #0077b5;
 }
 
 .social-link.github:hover {
   background-color: #333;
-  color: var(--white);
+  color: #ffffff;
+  border-color: #333;
 }
 
 .social-link.email {
@@ -88,7 +117,8 @@
 
 .social-link.email:hover {
   background-color: var(--primary-blue);
-  color: var(--white);
+  color: #ffffff;
+  border-color: var(--primary-blue);
 }
 
 .social-link svg {
@@ -137,7 +167,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 1s ease;
+  /* Animation handled by Framer Motion */
 }
 
 .hero-image img {
@@ -147,26 +177,6 @@
   border-radius: 50%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: 5px solid var(--white);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 968px) {

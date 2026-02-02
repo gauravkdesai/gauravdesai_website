@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { FaLinkedin, FaGithub, FaEnvelope, FaCopy, FaCheck } from 'react-icons/fa'
+import { motion } from 'framer-motion'
+import { FaLinkedin, FaGithub, FaEnvelope, FaCopy, FaCheck, FaFileDownload } from 'react-icons/fa'
 import './Hero.css'
 
 function Hero() {
@@ -51,11 +52,28 @@ function Hero() {
     <section id="home" className="hero">
       <div className="hero-container">
         <div className="hero-content">
-          <div className="hero-text">
+          <motion.div 
+            className="hero-text"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h2 className="hero-greeting">Hello, I'm</h2>
             <h1 className="hero-name">Gaurav Desai</h1>
             <p className="hero-bio">{shortBio}</p>
             
+            <div className="hero-actions">
+              <a 
+                href="/gauravdesai_website/resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="resume-btn"
+              >
+                <FaFileDownload />
+                <span>Download Resume</span>
+              </a>
+            </div>
+
             <div className="hero-social">
               <a 
                 href={socialLinks.linkedin} 
@@ -100,9 +118,14 @@ function Hero() {
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
           
-          <div className="hero-image">
+          <motion.div 
+            className="hero-image"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <img 
               src={profilePhoto} 
               alt="Gaurav Desai" 
@@ -112,7 +135,7 @@ function Hero() {
                 e.target.src = 'https://via.placeholder.com/400x400?text=Profile+Photo'
               }}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
