@@ -6,52 +6,77 @@
 
 :root {
   /* Light Theme (Default) */
-  --primary-blue: #2563eb;
-  --primary-blue-dark: #1e40af;
-  --primary-blue-light: #3b82f6;
-  --gray-dark: #1f2937;
-  --gray-medium: #6b7280;
-  --gray-light: #9ca3af;
-  --gray-lighter: #e5e7eb;
+  --primary-blue: #0050FF; /* Swiss Blue - Sharper */
+  --primary-blue-dark: #003CC0;
+  --primary-blue-light: #4D85FF;
+  --gray-dark: #111111;
+  --gray-medium: #666666;
+  --gray-light: #AAAAAA;
+  --gray-lighter: #E5E5E5;
   --white: #ffffff;
   --background: #ffffff;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
+  --text-primary: #111111;
+  --text-secondary: #555555;
   
-  /* Gradients & Shadows */
-  --section-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Typography */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Shadows & Texture */
+  --card-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); /* Hard shadow */
+  --grid-pattern: radial-gradient(#d1d5db 1px, transparent 1px);
 }
 
 :root[data-theme="dark"] {
   /* Dark Theme */
-  --primary-blue: #60a5fa;
-  --primary-blue-dark: #3b82f6;
-  --primary-blue-light: #93c5fd;
+  --primary-blue: #4D85FF;
+  --primary-blue-dark: #0050FF;
+  --primary-blue-light: #99BAFF;
   --gray-dark: #f9fafb;
   --gray-medium: #d1d5db;
   --gray-light: #9ca3af;
-  --gray-lighter: #374151;
-  --white: #1f2937;
-  --background: #111827;
-  --text-primary: #f9fafb;
-  --text-secondary: #d1d5db;
+  --gray-lighter: #333333;
+  --white: #1A1A1A;
+  --background: #0D0D0D;
+  --text-primary: #EDEDED;
+  --text-secondary: #AAAAAA;
   
-  /* Gradients & Shadows */
-  --section-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --card-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5); /* Hard shadow */
+  --grid-pattern: radial-gradient(#333333 1px, transparent 1px);
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
   background-color: var(--background);
+  /* Dot Grid Pattern */
+  background-image: var(--grid-pattern);
+  background-size: 24px 24px;
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gray-light);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-medium);
 }
 
 html {

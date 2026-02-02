@@ -54,11 +54,11 @@ function Hero() {
         <div className="hero-content">
           <motion.div 
             className="hero-text"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="hero-greeting">Hello, I'm</h2>
+            <span className="hero-tag">Hello, I'm</span>
             <h1 className="hero-name">Gaurav Desai</h1>
             <p className="hero-bio">{shortBio}</p>
             

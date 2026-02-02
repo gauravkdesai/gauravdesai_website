@@ -2,8 +2,10 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 100px;
-  background: var(--section-gradient);
+  padding-top: 80px;
+  /* Background handled by body grid pattern */
+  overflow: hidden; /* For decorative elements */
+  position: relative;
 }
 
 .hero-container {
@@ -11,70 +13,82 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
   align-items: center;
 }
 
-.hero-text {
-  /* Animation handled by Framer Motion */
-}
-
-.hero-greeting {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-  font-weight: 400;
+.hero-tag {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--primary-blue);
+  background: rgba(0, 80, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
 .hero-name {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 5rem;
+  font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-  line-height: 1.2;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
 }
 
 .hero-bio {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--text-secondary);
-  margin-bottom: 2.5rem;
-  line-height: 1.8;
-  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  max-width: 90%;
+  font-weight: 400;
 }
 
 .hero-actions {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .resume-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.8rem 1.75rem;
-  background-color: var(--primary-blue);
-  color: #ffffff; /* Always white for contrast on blue */
-  border-radius: 8px;
+  padding: 1rem 2rem;
+  background-color: var(--text-primary); /* Bold black/white button */
+  color: var(--background);
+  border-radius: 0; /* Square corners for Swiss look */
+  font-family: var(--font-mono);
   font-weight: 600;
-  font-size: 1.05rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.25);
-  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 6px 6px 0px var(--primary-blue); /* Hard shadow accent */
+  border: 2px solid var(--text-primary);
 }
 
 .resume-btn:hover {
-  background-color: var(--primary-blue-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.35);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px var(--primary-blue);
+}
+
+.resume-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--primary-blue);
 }
 
 .hero-social {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -82,152 +96,77 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--white);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow */
-  transition: all 0.3s ease;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--background);
+  border: 2px solid var(--gray-lighter);
+  border-radius: 0; /* Square */
+  transition: all 0.2s ease;
   color: var(--text-primary);
-  font-weight: 500;
-  font-size: 0.95rem;
-  border: 1px solid var(--gray-lighter); /* Added border for definition */
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  box-shadow: none;
 }
 
 .social-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-color: var(--gray-light);
-}
-
-.social-link.linkedin:hover {
-  background-color: #0077b5;
-  color: #ffffff;
-  border-color: #0077b5;
-}
-
-.social-link.github:hover {
-  background-color: #333;
-  color: #ffffff;
-  border-color: #333;
-}
-
-.social-link.email {
-  position: relative;
-}
-
-.social-link.email:hover {
-  background-color: var(--primary-blue);
-  color: #ffffff;
   border-color: var(--primary-blue);
-}
-
-.social-link svg {
-  font-size: 1.5rem;
-}
-
-.email-copy-icon {
-  position: absolute;
-  top: 0.25rem;
-  right: 0.25rem;
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
-  border-radius: 4px;
-  color: inherit;
-  cursor: pointer;
-  padding: 0.25rem 0.35rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: all 0.2s ease;
-  font-size: 0.7rem;
-  pointer-events: auto;
-  z-index: 10;
-}
-
-.social-link.email:hover .email-copy-icon {
-  opacity: 1;
-}
-
-.email-copy-icon:hover {
-  background: rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-}
-
-.email-copy-icon:active {
-  transform: scale(0.95);
-}
-
-.email-copy-icon svg {
-  font-size: 0.7rem;
-  display: block;
+  color: var(--primary-blue);
+  transform: translateY(-2px);
 }
 
 .hero-image {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Animation handled by Framer Motion */
+}
+
+/* Abstract blob background */
+.hero-image::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: var(--primary-blue);
+  opacity: 0.1;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: -1;
+  animation: morph 8s ease-in-out infinite;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   height: auto;
-  border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border: 5px solid var(--white);
+  border-radius: 2rem; /* Soft rectangle */
+  box-shadow: 12px 12px 0px var(--gray-lighter); /* Hard shadow */
+  border: 2px solid var(--text-primary);
+  background-color: var(--white);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+@keyframes morph {
+  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+  100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
 }
 
 @media (max-width: 968px) {
   .hero-content {
     grid-template-columns: 1fr;
+    text-align: left; /* Keep left align even on mobile for Swiss feel */
     gap: 3rem;
-    text-align: center;
   }
-
-  .hero-text {
-    order: 2;
+  
+  .hero-name {
+    font-size: 3.5rem;
   }
-
+  
   .hero-image {
-    order: 1;
+    order: -1; /* Image top on mobile */
+    margin-bottom: 1rem;
   }
-
-  .hero-name {
-    font-size: 2.5rem;
-  }
-
-  .hero-bio {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-social {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 120px;
-    min-height: auto;
-    padding-bottom: 60px;
-  }
-
-  .hero-name {
-    font-size: 2rem;
-  }
-
-  .hero-bio {
-    font-size: 1rem;
-  }
-
-  .social-link {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
-  }
-
+  
   .hero-image img {
     max-width: 300px;
   }
