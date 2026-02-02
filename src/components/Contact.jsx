@@ -1,15 +1,11 @@
 import { useState } from 'react'
 import { FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaCopy, FaCheck } from 'react-icons/fa'
+import { contactInfo } from '../data/contact'
+import SafeLink from './common/SafeLink'
 import './Contact.css'
 
 function Contact() {
   const [copied, setCopied] = useState(false)
-  
-  const contactInfo = {
-    email: 'contact@gaurav-desai.com', 
-    linkedin: 'https://www.linkedin.com/in/gauravkdesai/',
-    location: 'Zurich, Switzerland'
-  }
 
   const handleCopyEmail = async (e) => {
     e.preventDefault()
@@ -49,17 +45,17 @@ function Contact() {
         
         <div className="contact-content">
           <div className="contact-cards">
-            <a 
-              href={`mailto:${contactInfo.email}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-card"
-              aria-label="Send email"
-            >
-              <div className="contact-icon email">
-                <FaEnvelope />
-              </div>
-              <h3 className="contact-card-title">Email</h3>
+            <div className="contact-card email-card">
+              <SafeLink 
+                href={`mailto:${contactInfo.email}`}
+                className="contact-card-link"
+                aria-label="Send email"
+              >
+                <div className="contact-icon email">
+                  <FaEnvelope />
+                </div>
+                <h3 className="contact-card-title">Email</h3>
+              </SafeLink>
               <div className="contact-card-value-wrapper">
                 <p className="contact-card-value">{contactInfo.email}</p>
                 <button
@@ -71,12 +67,10 @@ function Contact() {
                   {copied ? <FaCheck /> : <FaCopy />}
                 </button>
               </div>
-            </a>
+            </div>
 
-            <a 
+            <SafeLink 
               href={contactInfo.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
               className="contact-card"
               aria-label="LinkedIn profile"
             >
@@ -85,7 +79,7 @@ function Contact() {
               </div>
               <h3 className="contact-card-title">LinkedIn</h3>
               <p className="contact-card-value">Connect with me</p>
-            </a>
+            </SafeLink>
 
             <div className="contact-card location">
               <div className="contact-icon location">
@@ -102,4 +96,3 @@ function Contact() {
 }
 
 export default Contact
-

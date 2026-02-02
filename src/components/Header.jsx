@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
+import { FaMoon, FaSun } from 'react-icons/fa'
+import { useTheme } from '../context/ThemeContext'
 import './Header.css'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
+  const { theme, toggleTheme } = useTheme()
 
   const tagline = "Software Developer Turned Risk Manager"
 
@@ -44,14 +47,24 @@ function Header() {
           <h1 className="header-name">Gaurav Desai</h1>
           <p className="header-tagline">{tagline}</p>
         </div>
-        
-        <button 
-          className="mobile-menu-toggle"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={isMenuOpen ? 'hamburger open' : 'hamburger'}></span>
-        </button>
+
+        <div className="header-controls">
+          <button 
+            className="theme-toggle" 
+            onClick={toggleTheme}
+            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          >
+            {theme === 'light' ? <FaMoon /> : <FaSun />}
+          </button>
+          
+          <button 
+            className="mobile-menu-toggle"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className={isMenuOpen ? 'hamburger open' : 'hamburger'}></span>
+          </button>
+        </div>
 
         <nav className={`header-nav ${isMenuOpen ? 'open' : ''}`}>
           <a 
