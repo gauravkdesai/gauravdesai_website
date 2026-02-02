@@ -17,6 +17,10 @@
   --background: #ffffff;
   --text-primary: #1f2937;
   --text-secondary: #6b7280;
+  
+  /* Gradients & Shadows */
+  --section-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 :root[data-theme="dark"] {
@@ -32,6 +36,10 @@
   --background: #111827;
   --text-primary: #f9fafb;
   --text-secondary: #d1d5db;
+  
+  /* Gradients & Shadows */
+  --section-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 body {

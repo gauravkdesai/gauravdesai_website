@@ -1,14 +1,14 @@
 .contact {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: var(--white);
+  color: #ffffff;
 }
 
 .contact .section-title {
-  color: var(--white);
+  color: #ffffff;
 }
 
 .contact .section-title::after {
-  background-color: var(--white);
+  background-color: #ffffff;
 }
 
 .contact .section-subtitle {
@@ -41,7 +41,7 @@
   text-align: center;
   transition: all 0.3s ease;
   border: 2px solid rgba(255, 255, 255, 0.2);
-  color: var(--white);
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -82,7 +82,7 @@
   font-size: 1.125rem;
   font-weight: 600;
   margin: 0;
-  color: var(--white);
+  color: #ffffff;
 }
 
 .contact-card-value-wrapper {
@@ -108,7 +108,7 @@
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
-  color: var(--white);
+  color: #ffffff;
   cursor: pointer;
   padding: 0.4rem 0.6rem;
   display: flex;

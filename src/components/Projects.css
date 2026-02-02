@@ -1,5 +1,5 @@
 .projects {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: var(--section-gradient);
 }
 
 .projects-container {
@@ -63,7 +63,7 @@
   background-color: var(--white);
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
